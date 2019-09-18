@@ -5,6 +5,7 @@ public class lazo_p3 {
 
 	public static void main(String[] args) {
 		
+		// Initializing variables
 		String[] topics = {"Environment", "LGBTQ Rights", "Social Media", "Health Bills", "Sport Events"};
 		int [][] responses = new int [5][10];
 		int numresp;
@@ -16,21 +17,26 @@ public class lazo_p3 {
 		int minTopic = 0;
 		int maxTopic = 0;
 		int averageRating;
-		
-		
-		Scanner scnr = new Scanner(System.in);
-		
-		System.out.println("Please enter the number of polls that will be taken.");
-		numresp = scnr.nextInt();
-		
-		System.out.println("For each topic, rate how important it is to you. 1 being the least, 10 being the most important.");
-		
 		int min = total[0];
 		int max = total[0];
 		
+		// Entering Scanner
+		Scanner scnr = new Scanner(System.in);
+		
+		// Figuring out the number of polls that will be taken
+		System.out.println("Please enter the number of polls that will be taken.");
+		numresp = scnr.nextInt();
+		
+		// Rating issues
+		System.out.println("For each topic, rate how important it is to you. 1 being the least, 10 being the most important.");
+		
+		
+		
+		// Creating a nested for loop, for how many responses is entered
 		for (i = 0; i < numresp; i = i+1) {
 			
 			
+			// For the number of topics they rate on
 			for (j = 0; j < 5; j = j+1) {
 				
 				System.out.println("\n" +topics[j]);
